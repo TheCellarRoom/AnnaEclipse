@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-     Theme: Anna Eclipse Photography
+     Theme: AnnaEclipsePhotography
      Design: TheCellarRoom Limited 2014
 -->
 <html>
@@ -38,22 +38,25 @@
         font: 12px/20px "open sans", Calibri, Verdana, serif;
         padding-top: 25px;
         text-align: center;
-        width:500px;
+        width:690px;
         margin: 0 auto;
      }
      
+     .centered { text-align:center; margin:auto auto;}
+     
+    
      h1, h2, h3, hQ {
         font-family: "open sans", Calibri, Verdana, serif;
      }
 
      h1 {
-        font-size: 36px;
-        line-height:36px;
+        font-size: 24px;
+        line-height:28px;
      }
 
      h2 {
-        font-size: 24px;
-        line-height: 28px; 
+        font-size: 20px;
+        line-height: 24px; 
      }
 
      h3 {
@@ -87,6 +90,27 @@
 
      #main {
         padding: 0px;
+     }
+     
+     .photoCaption, .media {
+         background-color:#000000;
+         margin:auto auto;
+         text-align:center;
+     }
+/*----- SEARCH FORM -----*/
+
+     #frmSearch {
+        padding-top: 20px; 
+        display: none;
+     }
+
+     #txtSearch {
+        background: url(http://static.tumblr.com/bpryy0m/6lRl6gmys/search.jpg) left no-repeat;
+        width: 225px;
+        padding: 2px 0 0 20px;
+        font: 12px/12px Calibri, serif;
+        color: #222;
+        border: 0px;
      }
 
 /*----- MASTHEAD -----*/
@@ -135,21 +159,6 @@
         font-family: Calibri;
      }
 
-/*----- SEARCH FORM -----*/
-
-     #frmSearch {
-        padding-top: 20px; 
-        display: none;
-     }
-
-     #txtSearch {
-        background: url(http://static.tumblr.com/bpryy0m/6lRl6gmys/search.jpg) left no-repeat;
-        width: 225px;
-        padding: 2px 0 0 20px;
-        font: 12px/12px Calibri, serif;
-        color: #222;
-        border: 0px;
-     }
 
 /*----- MAIN HEADER NAV STRIP -----*/
 
@@ -180,7 +189,7 @@
         margin: 0 2px;
         text-decoration: none;
         color: #3498db;
-        text-transform: Uppercase;
+        text-transform: Capitalise;
      }
 
      #mainNav a:hover, #mainNav a:active {
@@ -211,7 +220,7 @@
         text-transform: Uppercase;
         font-weight: bold;
         border-bottom: 1px solid #bca474;
-        background: #fff;
+        background: #000;
      }
 
      h5 a:link, .line a:visited{
@@ -219,7 +228,7 @@
         font-size: 10px;
         color: #bca474;
         text-decoration: none;
-        text-transform: Uppercase;
+        text-transform: capitalise;
         font-weight: bold;
      }
 
@@ -232,7 +241,7 @@
         position: relative;
         margin: 0 auto;
         padding: 0 8px;
-        background: #fff;
+        background: #000;
         top: 10px;
      }
 
@@ -243,16 +252,17 @@
 /*----- ARTICLE -----*/
 
      article {
-        background: #fff;
-        margin-bottom: 20px;
+        background: #000;
         text-align: left;
+        margin:auto auto;
        position: relative;
       }
 
      article img {
         border: none;
-        margin-bottom: 15px;
-        max-width: 500px;
+        max-width: 690px;
+        margin: 0 auto;
+        text-align:center;
      }
 
      article p img {
@@ -285,7 +295,7 @@
 
      article h2 a:link, article h2 a:visited {
         text-transform: Uppercase;
-        color: #222;
+        color: #3498db;
         text-decoration: none;
      }
 
@@ -412,11 +422,10 @@
      }
 
      #pageNav a:link, #pageNav a:visited {
-        font: 11px Georgia, "Times New Roman", Times, serif;
+        font: 11px "open sans",Calibri, Verdana, serif;
         padding: 0;
         margin: 0 2px;
-        background: #34hdf5;
-        color: #222;
+        color: #34hdf5;
         text-decoration: none;
      }
 
@@ -439,7 +448,7 @@
         border-top: 1px solid #666;
         color: #aaa;
         padding: 20px 0 32px 0;
-        font-size: 11px;
+        font-size: 9px;
      }
 
      #sitemeta p {
@@ -518,7 +527,6 @@
               <li><a href="/archive">Archive</a></li>
               <li><a href="/random">Random</a></li>
               <li><a href="{RSS}">RSS</a></li>
-              <li><a href="javascript:;" id="btnSearch">Search</a></li>
               {block:IfTwitterName}
               <li><a href="http://twitter.com/{text:Twitter name}">Twitter</a></li>
               {/block:IfTwitterName}
@@ -574,7 +582,11 @@
            {/block:Text}
           
            {block:Photo}
-              {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+              <div class="centered">
+               {LinkOpenTag}
+                  <img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+               {LinkCloseTag}
+              </div>
               {block:Caption}<div class="photoCaption">{Caption}</div>{/block:Caption}
            {/block:Photo}
           
@@ -664,7 +676,7 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'fawslstats'; // Required - Replace <example> with your forum shortname
+    var disqus_shortname = 'annaeclipse'; // Required - Replace <example> with your forum shortname
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
