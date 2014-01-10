@@ -1,3 +1,3 @@
 ##### AnnaEclipsePhotography.co.uk
 
-> Photoblog
+> Tumblr theme for Photoblog
