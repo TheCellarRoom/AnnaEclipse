@@ -1,5 +1,5 @@
-##### AnnaEclipsePhotography.co.uk
+###### AnnaEclipse.Tumblr.com
 
 > Tumblr theme for Photoblog
 
-Visit AnnaEclipsePhotography.co.uk to view the actual site.
+Visit AnnaEclipse.Tumblr.com  to view the actual site.
